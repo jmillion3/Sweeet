@@ -1,0 +1,52 @@
+.home {
+	// background: rgba(255, 0, 0, 0.377);
+	height: 80vh;
+	width: 99vw;
+
+	display: flex;
+	justify-content: center;
+	// align-items: flex-start;
+	align-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.friends {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+img {
+	margin: 10px;
+	height: 200px;
+	width: 200px;
+}
+
+h2 {
+	height: 50px;
+	width: 300px;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+@media screen and(max-width: 800px) {
+	img {
+		height: 150px;
+		width: 150px;
+	}
+}
+
+@media screen and(max-width: 650px) {
+	/* Styles will only be applied when view port width is 500px and lower */
+	img {
+		height: 100px;
+		width: 100px;
+	}
+}

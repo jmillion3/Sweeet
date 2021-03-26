@@ -13,7 +13,7 @@ module.exports = {
         const hash = bcrypt.hashSync(password, salt);
         const [newUser] = await db.user.add_user([first, last, email, username, hash])
         req.session.user = {
-            userId: newUser.user_id,
+            user_id: newUser.user_id,
             first: newUser.first,
             last: newUser.last,
             email: newUser.email,
@@ -32,7 +32,7 @@ module.exports = {
         const authenticated = bcrypt.compareSync(password, foundUser.password);
         if(authenticated){
             req.session.user = {
-                userId: foundUser.user_id,
+                user_id: foundUser.user_id,
                 username: foundUser.username,
                 email: foundUser.email
             }

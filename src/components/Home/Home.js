@@ -14,7 +14,7 @@ import {Link} from 'react-router-dom';
 import './Home.css'
 
 
-const Home = () => {
+const Home = (props) => {
     // const [user, setUser] = useState([]);
     const [productList, setProductList] = useState([]);
 
@@ -28,13 +28,13 @@ const Home = () => {
     return (
         <div className="home">
           {productList.map((product) => {
-            //   console.log(product)
+              // console.log(product)
             return (
                   <li key={product.p_name} className="friends">
                     <div>
                       {/* <p>{`${product.p_name}`}</p> */}
-                    <Link to="/product/:id">
-                      <img src={product.p_image} alt="productImg"/>
+                    <Link key={product.name} to={`/home/products/${product.p_id}`} className="candy">
+                      <img src={product.p_image} alt="productImg" />
                     </Link>
                       <h3>{`${product.p_name}`}</h3>
                       <h3>{`$${product.p_cost}.00`}</h3>

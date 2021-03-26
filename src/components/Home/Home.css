@@ -11,6 +11,7 @@
       align-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font-family: 'Lobster', cursive;
 }
 
 .friends {
@@ -27,10 +28,17 @@
       align-content: center;
 }
 
+.candy {
+  width: 200px;
+  height: 200px;
+}
+
 img {
   margin: 10px;
-  height: 200px;
-  width: 200px;
+  width: inherit;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 h2 {

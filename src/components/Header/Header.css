@@ -7,8 +7,30 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 10vh;
+  position: relative;
+  top: -15px;
+  height: 13vh;
   width: 100vw;
-  background: pink;
+}
+
+.headCenter {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  color: #04dbdb;
+  text-shadow: 2px 2px 3px purple;
+}
+
+.icons {
+  text-shadow: 2px 2px 3px purple;
+}
+
+.scallop {
+  position: absolute;
+  height: 13vh;
+  width: 190%;
+  margin: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
 }
 /*# sourceMappingURL=Header.css.map */

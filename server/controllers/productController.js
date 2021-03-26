@@ -6,8 +6,8 @@ module.exports = {
     },
     getProduct: async (req, res) => {
         const db = req.app.get('db');
-        const {p_id} = req.body;
-        const product = await db.products.get_product(p_id)
+        const {p_id} = req.params;
+        const [product] = await db.products.get_product(p_id)
         res.status(200).send(product)
     }
 }

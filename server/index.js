@@ -11,7 +11,7 @@ app.use(cors());
 const {SESSION_SECRET, SERVER_PORT, CONNECTION_STRING} = process.env
 const userCtrl = require('./controllers/userController');
 const productCtrl = require('./controllers/productController');
-// const cartCtrl = require('./controllers/cartCtrl')
+const cartCtrl = require('./controllers/cartController');
 // const search = require('./controllers/searchController');
 
 // * top level middleware
@@ -45,12 +45,12 @@ app.get(`/auth/user`, userCtrl.getUser);
 // app.put('/auth/update', userCtrl.update);
 // /home
 app.get(`/home/products`, productCtrl.getProducts);
-// app.get(`/products/:id`);
+app.get(`/home/products/:p_id`, productCtrl.getProduct);
 // /cart
-// app.post(`/cart/start`);
-// app.post(`/cart/add/:id`);
+app.post(`/cart/new`, cartCtrl.cartNew);
+app.post(`/cart/add/:p_id`, cartCtrl.cartAdd);
 // app.delete(`/cart/delete/:id`);
-// app.get(`/cart/get`);
+app.get(`/cart/get`, cartCtrl.cartGet);
 
 // * nodemon listens for changes
 app.listen(SERVER_PORT, () => console.log(`It's over ${SERVER_PORT}!`))

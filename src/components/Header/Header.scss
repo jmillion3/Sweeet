@@ -3,8 +3,32 @@
 	justify-content: space-around;
 	align-items: center;
 
-	height: 10vh;
+	position: relative;
+	top: -15px;
+
+	height: 13vh;
 	width: 100vw;
 
-	background: pink;
+	// background: rgb(251, 79, 107);
+}
+
+.headCenter {
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+	color: rgb(4, 219, 219);
+	text-shadow: 2px 2px 3px purple;
+}
+
+.icons {
+	text-shadow: 2px 2px 3px purple;
+}
+
+.scallop {
+	position: absolute;
+	height: 13vh;
+	width: 190%;
+	margin: 0;
+	left: 0;
+	z-index: -1;
+	overflow: hidden;
 }

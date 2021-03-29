@@ -21,6 +21,7 @@ module.exports = {
     },
     cartGet: async (req, res) => {
         const db = req.app.get('db');
+        // console.log(req.session)
         const {user_id} = req.session.user;
         const getCart = await db.cart.get_cart(user_id);
         res.status(200).send(getCart);

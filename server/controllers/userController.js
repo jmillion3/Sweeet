@@ -37,6 +37,7 @@ module.exports = {
                 email: foundUser.email
             }
             res.status(200).send(req.session.user)
+            console.log(req.session.user)
         } else {
             res.status(401).send('Incorrect login information')
         }

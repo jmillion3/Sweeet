@@ -1,28 +1,41 @@
 import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
 import axios from 'axios';
 // import {Link} from 'react-router-dom';
 // import './Product.css'
 
 const Cart = (props) => {
     const {p_id} = props.match.params
-    const [cart, setCart] = useState({});
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        axios.get(`http://localhost:4001/cart/start`).then((res) => {
+        axios.get(`/cart/get`).then((res) => {
             setCart(res.data)
         })
     }, [p_id])
     
     return(
-        // {const [p_id, p_name, p_image, p_details, p_cost] = product}
-        <div>
-            <h1>{`${cart.p_name}`}</h1>
-            <img alt={`${cart.p_image}`} src={`${cart.p_image}`}></img>
-            <img alt="Nutrition Facts" src={`${cart.p_details}`}></img>
-            <h3>{`$${cart.p_cost}.00`}</h3>
+        <div className="cart">
+        {cart.map((cartP) => {
+            console.log(cartP)
+            return(
+                <li key={cartP.cart_id}>
+                    <div>
+                        {/* {console.log(cart.cart_id)} */}
+                        <h1>{`${cartP.p_name}`}</h1>
+                        <img alt={`${cartP.p_image}`} src={`${cartP.p_image}`}></img>
+                        <img alt="Nutrition Facts" src={`${cartP.p_details}`}></img>
+                        <h3>{`$${cartP.p_cost}.00`}</h3>
+                    </div>
+                </li>
+            )
+        })}
         </div>
+        
     )
     
 }
 
-export default Cart;
+const mapStateToProps = state => state.cart;
+
+export default connect(mapStateToProps)(Cart);

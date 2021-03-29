@@ -47,7 +47,7 @@ app.get(`/auth/user`, userCtrl.getUser);
 app.get(`/home/products`, productCtrl.getProducts);
 app.get(`/home/products/:p_id`, productCtrl.getProduct);
 // /cart
-app.post(`/cart/new`, cartCtrl.cartNew);
+app.post(`/cart/`, cartCtrl.cartNew);
 app.post(`/cart/add/:p_id`, cartCtrl.cartAdd);
 // app.delete(`/cart/delete/:id`);
 app.get(`/cart/get`, cartCtrl.cartGet);

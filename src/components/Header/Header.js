@@ -42,7 +42,9 @@ class Header extends Component {
             </div>
             <div className="headCenter">Sweeet</div>
             <div className="headRight">
-                <div><AiOutlineShoppingCart/></div>
+                <Link to="/cart/get">
+                    <div><AiOutlineShoppingCart/></div>
+                </Link>
                 <button onClick={this.logout}>Logout</button>
             </div>
         </nav>

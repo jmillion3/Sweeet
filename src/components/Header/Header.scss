@@ -1,3 +1,6 @@
+$primary: #04dbdb;
+$shadow: #800080;
+
 .header {
 	display: flex;
 	justify-content: space-around;
@@ -17,12 +20,12 @@
 .headCenter {
 	font-family: 'Lobster', cursive;
 	font-size: 50px;
-	color: rgb(4, 219, 219);
-	text-shadow: 2px 2px 3px purple;
+	color: $primary;
+	text-shadow: 2px 2px 3px $shadow;
 }
 
 .icons {
-	text-shadow: 2px 2px 3px purple;
+	text-shadow: 2px 2px 3px $shadow;
 }
 
 .scallop {

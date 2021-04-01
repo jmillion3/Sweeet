@@ -16,6 +16,7 @@ const cartCtrl = require('./controllers/cartController');
 // const search = require('./controllers/searchController');
 
 // * top level middleware
+app.use(express.static(`${__dirname}/../build`))
 app.use(express.json())
 app.use(session({
     resave: false,

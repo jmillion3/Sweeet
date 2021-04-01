@@ -18,11 +18,11 @@
   font-family: 'Lobster', cursive;
   font-size: 50px;
   color: #04dbdb;
-  text-shadow: 2px 2px 3px purple;
+  text-shadow: 2px 2px 3px #800080;
 }
 
 .icons {
-  text-shadow: 2px 2px 3px purple;
+  text-shadow: 2px 2px 3px #800080;
 }
 
 .scallop {

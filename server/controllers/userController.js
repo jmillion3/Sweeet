@@ -1,4 +1,8 @@
 const bcrypt = require('bcrypt');
+require('dotenv').config();
+const nodemailer = require('nodemailer');
+
+const {EMAIL, PASSWORD} = process.env;
 
 module.exports = {
     register: async (req, res) => {
@@ -19,6 +23,27 @@ module.exports = {
             email: newUser.email,
             username: newUser.username
         }
+        const transporter = nodemailer.createTransport({
+            service: "hotmail",
+            auth: {
+                user: EMAIL,
+                pass: PASSWORD
+            }
+        });
+        const message = {
+            from: 'sweeetcandy123@outlook.com',
+            to: email,
+            subject: "Welcome to Sweeets",
+            text: `Thank you ${first} ${last} for joining Sweeets. Order as much as you like but make sure you brush your teeth.`
+        }
+        transporter.sendMail(message, function (err, data){
+            if(err){
+                console.log(err);
+                return;
+            }
+            console.log("Email sent")
+            res.sendStatus(200)
+        })
         res.status(200).send(req.session.user)
     },
     login: async (req, res) => {
@@ -37,7 +62,7 @@ module.exports = {
                 email: foundUser.email
             }
             res.status(200).send(req.session.user)
-            console.log(req.session.user)
+            // console.log(req.session.user)
         } else {
             res.status(401).send('Incorrect login information')
         }

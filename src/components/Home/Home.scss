@@ -1,5 +1,8 @@
+body {
+	background: rgba(255, 185, 247, 0.55);
+}
+
 .home {
-	// background: rgba(255, 0, 0, 0.377);
 	height: 80vh;
 	width: 99vw;
 
@@ -12,7 +15,7 @@
 	font-family: 'Lobster', cursive;
 }
 
-.friends {
+.homeLi {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,6 +25,22 @@
 .candy {
 	width: 200px;
 	height: 200px;
+}
+
+.productImg {
+	border-radius: 5%;
+	box-shadow: 1px 1px 5px purple;
+}
+
+.zoom {
+	transition: transform .2s;
+	border-radius: 5%;
+	// background-color: white;
+}
+
+.zoom:hover {
+	transform: scale(1.2);
+	// box-shadow: 1px 1px 5px purple;
 }
 
 img {

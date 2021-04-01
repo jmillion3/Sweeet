@@ -1,0 +1,29 @@
+.cart {
+	width: 100vw;
+	// position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+
+.total {
+	height: auto;
+	width: 25vw;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+.cart img {
+	height: 90px;
+	width: 90px;
+}
+
+.flexCart {
+	width: 70vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flexCart button {
+	width: 70px;
+}

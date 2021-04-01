@@ -1,0 +1,39 @@
+.cart {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.total {
+  height: auto;
+  width: 25vw;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.cart img {
+  height: 90px;
+  width: 90px;
+}
+
+.flexCart {
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexCart button {
+  width: 70px;
+}
+/*# sourceMappingURL=Cart.css.map */

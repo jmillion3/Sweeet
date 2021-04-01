@@ -15,8 +15,8 @@ module.exports = {
     cartDelete: async (req, res) => {
         const db = req.app.get('db');
         const {user_id} = req.session.user;
-        const {p_id} = req.params;
-        const deleteCart = await db.cart.cart_delete(user_id, p_id);
+        const {cart_id} = req.params;
+        const deleteCart = await db.cart.cart_delete(user_id, cart_id);
         res.status(200).send(deleteCart)
     },
     cartGet: async (req, res) => {

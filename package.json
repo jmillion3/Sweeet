@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "massive": "^6.7.1",
+    "nodemailer": "^6.5.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",

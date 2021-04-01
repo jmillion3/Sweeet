@@ -31,7 +31,10 @@ form {
 }
 
 form h1 {
-  font-size: 50px;
+  font-family: 'Lobster', cursive;
+  font-size: 100px;
+  color: #04dbdb;
+  text-shadow: 2px 2px 3px purple;
 }
 
 input {

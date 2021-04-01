@@ -11,8 +11,8 @@ class Auth extends Component {
             email: '',
             username: '',
             password: '',
-            firstName: '',
-            lastName: '',
+            first: '',
+            last: '',
             newUser: false
         }
     }
@@ -32,9 +32,9 @@ class Auth extends Component {
 
     register = async (e) => {
         e.preventDefault();
-        const {email, username, password, firstName, lastName} = this.state;
+        const {email, username, password, first, last} = this.state;
         try {
-            const user = await axios.post('/auth/register', {email, username, password, firstName, lastName})
+            const user = await axios.post('/auth/register', {email, username, password, first, last})
             this.props.loginUser(user.data);
             this.props.history.push('/')
         }
@@ -104,14 +104,14 @@ class Auth extends Component {
                 <input 
                 type='text'
                 placeholder='First Name*'
-                name='firstName'
-                value={this.state.firstName}
+                name='first'
+                value={this.state.first}
                 onChange={this.changeHandler}/>
                 <input 
                 type='text'
                 placeholder='Last Name*'
-                name='lastName'
-                value={this.state.lastName}
+                name='last'
+                value={this.state.last}
                 onChange={this.changeHandler}/>
                 <input
                 type="submit"

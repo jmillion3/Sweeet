@@ -12,6 +12,7 @@ const {SESSION_SECRET, SERVER_PORT, CONNECTION_STRING} = process.env
 const userCtrl = require('./controllers/userController');
 const productCtrl = require('./controllers/productController');
 const cartCtrl = require('./controllers/cartController');
+// const emailCtrl = require('./controllers/nodeMailer');
 // const search = require('./controllers/searchController');
 
 // * top level middleware
@@ -47,10 +48,11 @@ app.get(`/auth/user`, userCtrl.getUser);
 app.get(`/home/products`, productCtrl.getProducts);
 app.get(`/home/products/:p_id`, productCtrl.getProduct);
 // /cart
-app.post(`/cart/`, cartCtrl.cartNew);
+app.post(`/cart`, cartCtrl.cartNew);
 app.post(`/cart/add/:p_id`, cartCtrl.cartAdd);
-// app.delete(`/cart/delete/:id`);
+app.delete(`/cart/delete/:cart_id`, cartCtrl.cartDelete);
 app.get(`/cart/get`, cartCtrl.cartGet);
+
 
 // * nodemon listens for changes
 app.listen(SERVER_PORT, () => console.log(`It's over ${SERVER_PORT}!`))

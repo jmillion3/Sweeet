@@ -20,11 +20,11 @@ const Home = (props) => {
           {productList.map((product) => {
               // console.log(product)
             return (
-                  <li key={product.p_name} className="friends">
-                    <div>
+                  <li key={product.p_name} className="homeLi zoom">
+                    <div className="zoom">
                       {/* <p>{`${product.p_name}`}</p> */}
                     <Link key={product.name} to={`/home/products/${product.p_id}`} className="candy">
-                      <img src={product.p_image} alt="productImg" />
+                      <img src={product.p_image} alt="productImg" className="productImg"/>
                     </Link>
                       <h3>{`${product.p_name}`}</h3>
                       <h3>{`$${product.p_cost}.00`}</h3>

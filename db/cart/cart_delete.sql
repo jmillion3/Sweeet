@@ -1,2 +1,3 @@
 DELETE FROM cart
-WHERE p_id = $1;
+WHERE user_id = $1
+AND cart_id = $2;

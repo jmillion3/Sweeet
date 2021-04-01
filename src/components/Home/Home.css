@@ -1,3 +1,7 @@
+body {
+  background: rgba(255, 185, 247, 0.55);
+}
+
 .home {
   height: 80vh;
   width: 99vw;
@@ -14,7 +18,7 @@
   font-family: 'Lobster', cursive;
 }
 
-.friends {
+.homeLi {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +35,25 @@
 .candy {
   width: 200px;
   height: 200px;
+}
+
+.productImg {
+  border-radius: 5%;
+  -webkit-box-shadow: 1px 1px 5px purple;
+          box-shadow: 1px 1px 5px purple;
+}
+
+.zoom {
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  border-radius: 5%;
+}
+
+.zoom:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 img {

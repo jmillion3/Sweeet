@@ -8,9 +8,9 @@ const Product = (props) => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        axios.get(`http://localhost:4001/home/products/${p_id}`).then((res) => {
+        axios.get(`/home/products/${p_id}`).then((res) => {
             setProduct(res.data)
-            console.log(res.data)
+            // console.log(res.data)
         })
     }, [p_id])
 

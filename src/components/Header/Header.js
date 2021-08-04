@@ -8,7 +8,7 @@ import {getUser, logoutUser} from '../../redux/userReducer';
 import scallops from './SCALLOPS.png';
 import './Header.css';
 
-console.log(scallops)
+// console.log(scallops)
 class Header extends Component {
     constructor(){
         super();

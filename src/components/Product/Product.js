@@ -23,8 +23,8 @@ const Product = (props) => {
         <div className="product">
             {/* {console.log(res.data)} */}
             <h1>{`${product.p_name}`}</h1>
-            <img alt={`${product.p_image}`} src={`${product.p_image}`}></img>
-            <img alt="Nutrition Facts" src={`${product.p_details}`}></img>
+            <img alt={`${product.p_name}`} src={`${product.p_image}`}></img>
+            <img className="nutrition" alt="Nutrition Facts" src={`${product.p_details}`}></img>
             <h3>{`$${product.p_cost}.00`}</h3>
             <button onClick={() => cartAdd(p_id)}>Add to Cart</button>
         </div>

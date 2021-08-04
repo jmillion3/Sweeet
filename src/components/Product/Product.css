@@ -1,5 +1,13 @@
 .product img {
   height: 300px;
   width: 300px;
+  position: relative;
+}
+
+.nutrition {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 /*# sourceMappingURL=Product.css.map */

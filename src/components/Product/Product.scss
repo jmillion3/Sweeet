@@ -1,4 +1,10 @@
 .product img {
 	height: 300px;
 	width: 300px;
+	position: relative;
+}
+
+.nutrition {
+	object-fit: cover;
+	object-position: top;
 }

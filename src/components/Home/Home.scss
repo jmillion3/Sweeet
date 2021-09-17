@@ -23,8 +23,8 @@ body {
 }
 
 .candy {
-	width: 200px;
-	height: 200px;
+	width: 400px;
+	height: 400px;
 }
 
 .productImg {
@@ -50,9 +50,8 @@ img {
 	object-fit: cover;
 }
 
-h2 {
-	height: 50px;
-	width: 300px;
+h3 {
+	font-size: 40px;
 }
 
 li {
@@ -63,17 +62,23 @@ a {
 	text-decoration: none;
 }
 
-@media screen and(max-width: 800px) {
+@media screen and(max-width: 900px) {
 	img {
-		height: 150px;
-		width: 150px;
+		height: 250px;
+		width: 250px;
+	}
+	h3 {
+		font-size: 20px;
 	}
 }
 
 @media screen and(max-width: 650px) {
-	/* Styles will only be applied when view port width is 500px and lower */
+	/* Styles will only be applied when view port width is 650px and lower */
 	img {
 		height: 100px;
 		width: 100px;
+	}
+	h3 {
+		font-size: 10px;
 	}
 }
